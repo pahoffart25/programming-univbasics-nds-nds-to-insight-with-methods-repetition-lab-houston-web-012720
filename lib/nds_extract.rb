@@ -35,7 +35,9 @@ end
 def total_gross(source)
 total = 0
 source.each do |director|
-  total += director[:worldwide_gross]
+  director.each do |gross|
+    total += director[:worldwide_gross]
+  end
 end
 return total
 end
